@@ -23,8 +23,14 @@ from sklearn_0p18_bridge_code import *
 
 
 '''
-Comments entered by Hariharane Ramasamy 
-Good
+Hariharane Ramasamy comments begin
+I understand most of the routines here. It is as given in ML books, training, multifold with different data sets for cross validation,
+so as overfitting is also reduced, This routine as is could be done offline. no issues here except, time reduction will help to 
+arrive at the model fast - so parallelism or gpgpu can be used to speed up the computation. needs to be studied - in other words, 
+once transformation is done to the data we desire as input to the model, libraries are alredy written to genearate the model and designed 
+to take advantage of the underlying architecture.
+Hariharane Ramasamy comments end
+
 '''
 
 #converts a value to a float gracefully

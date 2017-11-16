@@ -37,6 +37,16 @@ THE_OTHER_ANALYSTS = 'the_other_analysts'
 ###
 #########
 
+''' 
+Hariharane Ramasamy Comment begins 
+    1) In the following routines, the efforts are made to find out how good answers are in agreement, However the rating methods are looped which could be done in parallel likd
+       for rating_method in supported_rating_methods: ..... looped <-- this could be done in parallel.
+    2) Lot of transformations are done in scoresheet dataframe - which could be repetition. The datastructure could be created and kept in memory and used for calcuation as needed to avoid repetition. 
+    3) Hssh is not used to locate the presence of data as they could yield O(1) as opposed to log(n) in binrary. 
+    4) when understood, parellelism could be done nicely here. 
+Hariharane Ramasamy comment ends 
+'''
+
 
 def rate_analysts_against_eachother(scoresheet_dataframe, analysts_to_rate, questions_to_rate_over, rating_aggregation_method=np.mean, analyst_id_column_name='analyst', subject_id_column_name='submission'):
 
